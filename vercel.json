@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server-memory.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server-memory.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "PORT": "3000"
+  }
+}
